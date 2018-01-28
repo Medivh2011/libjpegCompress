@@ -4,8 +4,8 @@ Android libjpegCompress supported armeabi armeabi-v7a arm64-v8a,x86,x84_64
 
    <pre> <code>
 allprojects {
-		    repositories {
-			    maven { url 'https://jitpack.io' }
+	repositories {
+		maven { url 'https://jitpack.io' }
 		    }
 	    }
 	</code></pre>
