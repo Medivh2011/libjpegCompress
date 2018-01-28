@@ -1,7 +1,7 @@
 # libjpegCompress
 Android libjpegCompress supported armeabi armeabi-v7a arm64-v8a,x86,x84_64</br>
 
-##1.在项目build.gradle添加
+## 1.在项目build.gradle添加
    <pre> <code>
 allprojects {
 	repositories {
@@ -10,7 +10,7 @@ allprojects {
 	    }
 	</code></pre>
 	
-  ##2.在App module添加
+## 2.在App module添加
   
   <pre><code>
   dependencies {
@@ -19,7 +19,7 @@ allprojects {
 	}
 	</code></pre>
 	
-  ##3.Use
+## 3.Use
   <pre><code>
   ImageCompress
   .with(getApplicationContext())
