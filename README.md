@@ -23,7 +23,7 @@ allprojects {
   <pre><code>
   ImageCompress
   .with(getApplicationContext())
-  .load(imagePath)//要被压缩的图片路径
+  .load(imagePath)//需要压缩的图片路径
   .ignoreBy(100)//压缩100K以上的图片
   .setTargetDir(savedir)//保存压缩图片的位置
   .setOnCompressListener(new ImageCompress.OnCompressListener() 
