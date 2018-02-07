@@ -8,6 +8,8 @@ import android.text.TextUtils;
 
 import com.medivh.libjepgturbo.jepgcompress.utils.BitmapUtil;
 
+import java.io.File;
+
 
 public class ImageCompress implements Handler.Callback{
     private Builder mBuilder;
@@ -82,10 +84,11 @@ public class ImageCompress implements Handler.Callback{
     }
 
     private String getImageCacheFile(String suffix) {
-        return mBuilder.targetDir + "/" +
+
+        return  mBuilder.fileName == null ? mBuilder.targetDir + File.separator+
                 System.currentTimeMillis() +
                 (int) (Math.random() * 1000) +
-                (TextUtils.isEmpty(suffix) ? ".jpg" : suffix);
+                (TextUtils.isEmpty(suffix) ? ".jpg" : suffix) : mBuilder.targetDir + File.separator + mBuilder.fileName+ (TextUtils.isEmpty(suffix) ? ".jpg" : suffix);
     }
 
     public static class Builder{
@@ -94,6 +97,8 @@ public class ImageCompress implements Handler.Callback{
         private int ignoreSize;
         private String targetDir;
         private int quality;
+        private String fileName;
+
         private OnCompressListener listener;
 
         private Builder(Context context){
@@ -121,6 +126,12 @@ public class ImageCompress implements Handler.Callback{
             return this;
         }
 
+
+        public Builder fileName(String fileName)
+        {
+            this.fileName = fileName;
+            return this;
+        }
         public Builder setTargetDir(String targetDir) {
             this.targetDir = targetDir;
             return this;
