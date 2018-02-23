@@ -14,7 +14,7 @@ allprojects {
   
   <pre><code>
   dependencies {
-	        compile 'com.github.Medivh2011:libjpegCompress:0.5.0'
+	        compile 'com.github.Medivh2011:libjpegCompress:0.5.3'
 	         compile 'com.android.support:support-v4:buildVersion'
 	}
 	</code></pre>
@@ -25,6 +25,7 @@ allprojects {
   .with(getApplicationContext())
   .load(imagePath)//需要压缩图片的路径
   .ignoreBy(100)//压缩100K以上的图片
+  .fileName(...)//压缩文件名
   .setTargetDir(savedir)//保存压缩图片的位置
   .setOnCompressListener(new ImageCompress.OnCompressListener() 
   {
