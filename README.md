@@ -14,7 +14,7 @@ allprojects {
   
   <pre><code>
   dependencies {
-	        compile 'com.github.Medivh2011:libjpegCompress:0.5.3'
+	        compile 'com.github.Medivh2011:libjpegCompress:0.5.4'
 	         compile 'com.android.support:support-v4:buildVersion'
 	}
 	</code></pre>
