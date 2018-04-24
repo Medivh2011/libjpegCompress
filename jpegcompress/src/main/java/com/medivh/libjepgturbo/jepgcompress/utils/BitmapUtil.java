@@ -19,6 +19,7 @@ import java.io.IOException;
 
 /**
  * 图片处理工具类
+ * @author medivh
  * @version V1.0.0
  */
 
@@ -123,7 +124,10 @@ public class BitmapUtil {
         }
         // 最小比率为1
         if (ratio <= 0)
+        {
             ratio = 1;
+        }
+
         return ratio;
     }
 
@@ -134,13 +138,15 @@ public class BitmapUtil {
      */
     private static Bitmap getBitmapFromFile(String filePath){
         BitmapFactory.Options newOpts = new BitmapFactory.Options();
-        newOpts.inJustDecodeBounds = true;//只读边,不读内容
+        //只读边,不读内容
+        newOpts.inJustDecodeBounds = true;
         BitmapFactory.decodeFile(filePath, newOpts);
         int w = newOpts.outWidth;
         int h = newOpts.outHeight;
         // 获取尺寸压缩倍数
         newOpts.inSampleSize = getRatioSize(w,h);
-        newOpts.inJustDecodeBounds = false;//读取所有内容
+        //读取所有内容
+        newOpts.inJustDecodeBounds = false;
         newOpts.inDither = false;
         newOpts.inPurgeable=true;
         newOpts.inInputShareable=true;
@@ -203,6 +209,7 @@ public class BitmapUtil {
                 case ExifInterface.ORIENTATION_ROTATE_270:
                     degree = 270;
                     break;
+                default:
             }
         } catch (IOException e) {
             e.printStackTrace();

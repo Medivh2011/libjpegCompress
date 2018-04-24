@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 
 /**
  * 图片压缩
+ * @author medivh
  * @version V1.0.0
  */
 

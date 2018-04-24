@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\ndk\app\app.iml" filepath="C:\ndk\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagepicker/imagepicker.iml" filepath="$PROJECT_DIR$/imagepicker/imagepicker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ndk.iml" filepath="$PROJECT_DIR$/ndk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpegcompress/jpegcompress.iml" filepath="$PROJECT_DIR$/jpegcompress/jpegcompress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libjpegCompress.iml" filepath="$PROJECT_DIR$/libjpegCompress.iml" />
     </modules>
   </component>
 </project>

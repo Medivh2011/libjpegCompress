@@ -72,6 +72,7 @@ public class ImageCompress implements Handler.Callback{
             case MSG_COMPRESS_ERROR:
                 mBuilder.listener.onError((Throwable) msg.obj);
                 break;
+            default:
         }
         return false;
     }
